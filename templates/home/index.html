@@ -1,60 +1,98 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANACO Tabasco Noticias</title>
+{% extends "partials/base.html" %}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f3f5f7;
-            color: #172033;
-        }
+{% block title %}Inicio | CANACO Tabasco Noticias{% endblock %}
 
-        header {
-            padding: 24px;
-            text-align: center;
-            background: #102a43;
-            color: white;
-        }
+{% block content %}
+<section class="portada">
+    <div class="contenedor portada-contenido">
+        <span class="etiqueta">Información empresarial</span>
 
-        main {
-            width: min(900px, 90%);
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .boton {
-            display: inline-block;
-            padding: 12px 20px;
-            color: #102a43;
-            background: #f2c14e;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>CANACO Tabasco Noticias</h1>
-        <p>Información para empresarios y emprendedores</p>
-    </header>
-
-    <main>
-        <h2>Proyecto Django funcionando correctamente</h2>
+        <h1>Impulsamos el comercio y el emprendimiento de Tabasco</h1>
 
         <p>
-            Este portal permitirá publicar noticias, eventos,
-            capacitaciones y actividades empresariales.
+            Conoce las noticias, capacitaciones, eventos y oportunidades
+            más importantes para el desarrollo de las empresas locales.
         </p>
 
-        <a class="boton" href="#">Ver noticias</a>
-    </main>
-</body>
-</html>
+        <a class="boton-principal" href="#noticias">
+            Consultar noticias
+        </a>
+    </div>
+</section>
+
+<section id="noticias" class="contenedor seccion">
+    <div class="titulo-seccion">
+        <div>
+            <span class="subtitulo">Actualidad</span>
+            <h2>Noticias destacadas</h2>
+        </div>
+
+        <a href="#">Ver todas las noticias</a>
+    </div>
+
+    <div class="rejilla-noticias">
+        <article class="tarjeta-noticia tarjeta-principal">
+            <div class="imagen-noticia imagen-comercio">
+                <span>Comercio</span>
+            </div>
+
+            <div class="contenido-tarjeta">
+                <p class="fecha">24 de septiembre de 2026</p>
+                <h3>Nuevas oportunidades para negocios locales</h3>
+                <p>
+                    Empresarios y emprendedores participaron en una jornada
+                    de capacitación para fortalecer sus estrategias comerciales.
+                </p>
+                <a href="#">Leer noticia</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-noticia">
+            <div class="imagen-noticia imagen-tecnologia">
+                <span>Tecnología</span>
+            </div>
+
+            <div class="contenido-tarjeta">
+                <p class="fecha">22 de septiembre de 2026</p>
+                <h3>Herramientas digitales para pequeñas empresas</h3>
+                <p>
+                    La transformación digital continúa creando nuevas formas
+                    de atender a los consumidores.
+                </p>
+                <a href="#">Leer noticia</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-noticia">
+            <div class="imagen-noticia imagen-eventos">
+                <span>Eventos</span>
+            </div>
+
+            <div class="contenido-tarjeta">
+                <p class="fecha">20 de septiembre de 2026</p>
+                <h3>Próxima feria empresarial en Villahermosa</h3>
+                <p>
+                    El encuentro reunirá a comercios, proveedores y nuevos
+                    emprendimientos de la región.
+                </p>
+                <a href="#">Leer noticia</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="franja-categorias">
+    <div class="contenedor">
+        <span class="subtitulo subtitulo-claro">Explorar</span>
+        <h2>Categorías informativas</h2>
+
+        <div class="categorias">
+            <a href="#">Comercio</a>
+            <a href="#">Tecnología</a>
+            <a href="#">Capacitación</a>
+            <a href="#">Eventos</a>
+            <a href="#">Emprendimiento</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

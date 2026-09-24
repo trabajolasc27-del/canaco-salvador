@@ -1,0 +1,29 @@
+<header class="encabezado">
+    <div class="barra-superior">
+        <div class="contenedor barra-contenido">
+            <p>Portal informativo empresarial de Tabasco</p>
+            <p>Miércoles, 24 de septiembre de 2026</p>
+        </div>
+    </div>
+
+    <div class="contenedor identidad">
+        <a class="marca" href="{% url 'home:index' %}">
+            <span class="marca-icono">C</span>
+
+            <span>
+                <strong>CANACO Tabasco</strong>
+                <small>Noticias y desarrollo empresarial</small>
+            </span>
+        </a>
+    </div>
+
+    <nav class="menu">
+        <div class="contenedor menu-contenido">
+            <a href="{% url 'home:index' %}">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Categorías</a>
+            <a href="#">Eventos</a>
+            <a href="#">Iniciar sesión</a>
+        </div>
+    </nav>
+</header>
