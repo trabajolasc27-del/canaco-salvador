@@ -1,0 +1,94 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Detalle de noticia | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Comercio</span>
+        <h1>Nuevas oportunidades para los negocios locales</h1>
+        <p>Publicado el 24 de septiembre de 2026 · 125 visitas</p>
+    </div>
+</section>
+
+<div class="contenedor distribucion-detalle">
+    <article class="articulo">
+        <div class="portada-noticia">
+            <span>Imagen de portada</span>
+        </div>
+
+        <p class="resumen-noticia">
+            Empresarios y emprendedores de Tabasco participaron en una
+            jornada dedicada a fortalecer sus estrategias comerciales.
+        </p>
+
+        <p>
+            El encuentro permitió compartir conocimientos sobre atención
+            al cliente, herramientas digitales, administración y nuevas
+            oportunidades para los pequeños y medianos negocios.
+        </p>
+
+        <p>
+            Los participantes también conocieron alternativas para mejorar
+            la promoción de sus productos y fortalecer su presencia dentro
+            del mercado regional.
+        </p>
+
+        <h2>Galería</h2>
+
+        <div class="galeria">
+            <div>Actividad empresarial</div>
+            <div>Capacitación</div>
+            <div>Participantes</div>
+        </div>
+
+        <section class="comentarios">
+            <h2>Comentarios</h2>
+
+            <article class="comentario">
+                <strong>Usuario registrado</strong>
+                <p>Excelente iniciativa para apoyar a los negocios locales.</p>
+            </article>
+
+            <form class="formulario">
+                {% csrf_token %}
+
+                <label for="comentario">Agregar comentario</label>
+
+                <textarea
+                    id="comentario"
+                    name="comentario"
+                    rows="5"
+                    placeholder="Escribe tu comentario"
+                    required></textarea>
+
+                <button type="submit" class="boton-formulario">
+                    Enviar comentario
+                </button>
+            </form>
+        </section>
+    </article>
+
+    <aside class="barra-lateral">
+        <h2>Otras noticias</h2>
+
+        <a href="{% url 'home:detalle' %}">
+            Herramientas digitales para empresas
+        </a>
+
+        <a href="{% url 'home:detalle' %}">
+            Próxima feria empresarial
+        </a>
+
+        <a href="{% url 'home:detalle' %}">
+            Capacitación para emprendedores
+        </a>
+
+        <h2>Categorías</h2>
+
+        <a href="{% url 'home:categoria' %}">Comercio</a>
+        <a href="{% url 'home:categoria' %}">Tecnología</a>
+        <a href="{% url 'home:categoria' %}">Eventos</a>
+    </aside>
+</div>
+{% endblock %}

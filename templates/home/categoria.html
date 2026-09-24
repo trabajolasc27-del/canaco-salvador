@@ -1,0 +1,59 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Noticias | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Categoría</span>
+        <h1>Noticias de comercio</h1>
+        <p>Información para empresarios y emprendedores de Tabasco.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="lista-noticias">
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-azul">Comercio</div>
+
+            <div>
+                <p class="fecha">24 de septiembre de 2026</p>
+                <h2>Nuevas oportunidades para negocios locales</h2>
+                <p>
+                    Empresarios participaron en una jornada de capacitación
+                    para fortalecer sus estrategias comerciales.
+                </p>
+                <a href="{% url 'home:detalle' %}">Leer noticia</a>
+            </div>
+        </article>
+
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-verde">Tecnología</div>
+
+            <div>
+                <p class="fecha">22 de septiembre de 2026</p>
+                <h2>Herramientas digitales para pequeñas empresas</h2>
+                <p>
+                    Plataformas digitales ayudan a mejorar la comunicación
+                    con clientes y la promoción de productos.
+                </p>
+                <a href="{% url 'home:detalle' %}">Leer noticia</a>
+            </div>
+        </article>
+
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-naranja">Eventos</div>
+
+            <div>
+                <p class="fecha">20 de septiembre de 2026</p>
+                <h2>Próxima feria empresarial en Villahermosa</h2>
+                <p>
+                    El evento reunirá comercios, proveedores y nuevos
+                    emprendimientos de la región.
+                </p>
+                <a href="{% url 'home:detalle' %}">Leer noticia</a>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

@@ -18,12 +18,15 @@
     </div>
 
     <nav class="menu">
-        <div class="contenedor menu-contenido">
-            <a href="{% url 'home:index' %}">Inicio</a>
-            <a href="#">Noticias</a>
-            <a href="#">Categorías</a>
-            <a href="#">Eventos</a>
-            <a href="#">Iniciar sesión</a>
-        </div>
-    </nav>
+    <div class="contenedor menu-contenido">
+        <a href="{% url 'home:index' %}">Inicio</a>
+        <a href="{% url 'home:categoria' %}">Noticias</a>
+        <a href="{% url 'home:categoria' %}">Categorías</a>
+        <a href="{% url 'home:detalle' %}">Noticia destacada</a>
+        <a href="{% url 'home:login' %}">Iniciar sesión</a>
+        <a class="enlace-registro" href="{% url 'home:registro' %}">
+            Crear cuenta
+        </a>
+    </div>
+</nav>
 </header>

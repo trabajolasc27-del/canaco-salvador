@@ -27,7 +27,9 @@
             <h2>Noticias destacadas</h2>
         </div>
 
-        <a href="#">Ver todas las noticias</a>
+        <a href="{% url 'home:categoria' %}">
+            Ver todas las noticias
+        </a>
     </div>
 
     <div class="rejilla-noticias">
@@ -38,12 +40,17 @@
 
             <div class="contenido-tarjeta">
                 <p class="fecha">24 de septiembre de 2026</p>
+
                 <h3>Nuevas oportunidades para negocios locales</h3>
+
                 <p>
                     Empresarios y emprendedores participaron en una jornada
                     de capacitación para fortalecer sus estrategias comerciales.
                 </p>
-                <a href="#">Leer noticia</a>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
             </div>
         </article>
 
@@ -54,12 +61,17 @@
 
             <div class="contenido-tarjeta">
                 <p class="fecha">22 de septiembre de 2026</p>
+
                 <h3>Herramientas digitales para pequeñas empresas</h3>
+
                 <p>
                     La transformación digital continúa creando nuevas formas
                     de atender a los consumidores.
                 </p>
-                <a href="#">Leer noticia</a>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
             </div>
         </article>
 
@@ -70,12 +82,17 @@
 
             <div class="contenido-tarjeta">
                 <p class="fecha">20 de septiembre de 2026</p>
+
                 <h3>Próxima feria empresarial en Villahermosa</h3>
+
                 <p>
                     El encuentro reunirá a comercios, proveedores y nuevos
                     emprendimientos de la región.
                 </p>
-                <a href="#">Leer noticia</a>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
             </div>
         </article>
     </div>
@@ -87,11 +104,11 @@
         <h2>Categorías informativas</h2>
 
         <div class="categorias">
-            <a href="#">Comercio</a>
-            <a href="#">Tecnología</a>
-            <a href="#">Capacitación</a>
-            <a href="#">Eventos</a>
-            <a href="#">Emprendimiento</a>
+            <a href="{% url 'home:categoria' %}">Comercio</a>
+            <a href="{% url 'home:categoria' %}">Tecnología</a>
+            <a href="{% url 'home:categoria' %}">Capacitación</a>
+            <a href="{% url 'home:categoria' %}">Eventos</a>
+            <a href="{% url 'home:categoria' %}">Emprendimiento</a>
         </div>
     </div>
 </section>
