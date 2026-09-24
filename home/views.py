@@ -19,3 +19,10 @@ def login_view(request):
 
 def registro(request):
     return render(request, "home/registro.html")
+
+def perfil(request):
+    return render(request, "home/perfil.html")
+
+
+def panel(request):
+    return render(request, "home/panel.html")

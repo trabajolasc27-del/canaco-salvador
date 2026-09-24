@@ -1,0 +1,111 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Panel administrativo | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Panel de control</h1>
+        <p>Resumen general del portal de noticias.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        <aside class="menu-panel">
+            <h2>Administración</h2>
+
+            <a class="activo" href="{% url 'home:panel' %}">
+                Resumen
+            </a>
+
+            <a href="#">Noticias</a>
+            <a href="#">Comentarios</a>
+            <a href="#">Categorías</a>
+            <a href="#">Usuarios</a>
+            <a href="{% url 'home:perfil' %}">Mi perfil</a>
+            <a class="cerrar-sesion" href="{% url 'home:login' %}">
+                Cerrar sesión
+            </a>
+        </aside>
+
+        <div class="contenido-panel">
+            <div class="tarjetas-estadisticas">
+                <article>
+                    <span>Noticias</span>
+                    <strong>12</strong>
+                    <small>9 publicadas y 3 borradores</small>
+                </article>
+
+                <article>
+                    <span>Comentarios</span>
+                    <strong>28</strong>
+                    <small>5 pendientes de aprobación</small>
+                </article>
+
+                <article>
+                    <span>Categorías</span>
+                    <strong>5</strong>
+                    <small>Categorías activas</small>
+                </article>
+
+                <article>
+                    <span>Usuarios</span>
+                    <strong>16</strong>
+                    <small>Usuarios registrados</small>
+                </article>
+            </div>
+
+            <section class="tabla-panel">
+                <div class="cabecera-tabla">
+                    <div>
+                        <span class="subtitulo">Actividad reciente</span>
+                        <h2>Últimas publicaciones</h2>
+                    </div>
+
+                    <a class="boton-pequeno" href="#">
+                        Nueva publicación
+                    </a>
+                </div>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Nuevas oportunidades para negocios locales</td>
+                                <td>Comercio</td>
+                                <td><span class="estado publicado">Publicado</span></td>
+                                <td>24/09/2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>Herramientas digitales para empresas</td>
+                                <td>Tecnología</td>
+                                <td><span class="estado publicado">Publicado</span></td>
+                                <td>22/09/2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>Próxima feria empresarial</td>
+                                <td>Eventos</td>
+                                <td><span class="estado borrador">Borrador</span></td>
+                                <td>20/09/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
