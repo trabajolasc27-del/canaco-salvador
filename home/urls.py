@@ -28,4 +28,9 @@ path(
     views.panel_usuarios,
     name="panel_usuarios",
 ),
+path(
+    "cambiar-password/",
+    views.cambiar_password,
+    name="cambiar_password",
+),
 ]

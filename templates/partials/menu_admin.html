@@ -35,6 +35,12 @@
         Mi perfil
     </a>
 
+    <a
+    class="{% if request.resolver_match.url_name == 'cambiar_password' %}activo{% endif %}"
+    href="{% url 'home:cambiar_password' %}">
+    Cambiar contraseña
+</a>
+
     <a class="cerrar-sesion" href="{% url 'home:login' %}">
         Cerrar sesión
     </a>

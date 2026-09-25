@@ -1,70 +1,54 @@
-{% extends "partials/base.html" %}
+{% extends 'partials/base.html' %}
 
-{% block title %}Mi perfil | CANACO Tabasco{% endblock %}
+{% block title %}
+  Mi perfil | CANACO Tabasco
+{% endblock %}
 
 {% block content %}
-<section class="encabezado-pagina">
+  <section class="encabezado-pagina">
     <div class="contenedor">
-        <span class="etiqueta">Cuenta de usuario</span>
-        <h1>Mi perfil</h1>
-        <p>Consulta y actualiza tu información personal.</p>
+      <span class="etiqueta">Cuenta de usuario</span>
+      <h1>Mi perfil</h1>
+      <p>Consulta y actualiza tu información personal.</p>
     </div>
-</section>
+  </section>
 
-<section class="contenedor seccion">
+  <section class="contenedor seccion">
     <div class="perfil-contenedor">
-        <aside class="menu-panel">
-            <h2>Mi cuenta</h2>
+      <aside class="menu-panel">
+        <h2>Mi cuenta</h2>
 
-            <a class="activo" href="{% url 'home:perfil' %}">
-                Perfil
-            </a>
+        <a class="activo" href="{% url 'home:perfil' %}">Perfil</a>
 
-            <a href="#">Cambiar contraseña</a>
-            <a href="{% url 'home:index' %}">Regresar al inicio</a>
-            <a class="cerrar-sesion" href="{% url 'home:login' %}">
-                Cerrar sesión
-            </a>
-        </aside>
+        <a href="{% url 'home:cambiar_password' %}">Cambiar contraseña</a>
+        <a href="{% url 'home:index' %}">Regresar al inicio</a>
+        <a class="cerrar-sesion" href="{% url 'home:login' %}">Cerrar sesión</a>
+      </aside>
 
-        <article class="tarjeta-perfil">
-            <div class="avatar">SA</div>
+      <article class="tarjeta-perfil">
+        <div class="avatar">SA</div>
 
-            <h2>Salvador Aolani</h2>
-            <p class="rol-usuario">Usuario registrado</p>
+        <h2>Salvador Aolani</h2>
+        <p class="rol-usuario">Usuario registrado</p>
 
-            <form class="formulario" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
+        <form class="formulario" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
 
-                <label for="foto">Fotografía de perfil</label>
-                <input type="file" id="foto" name="foto" accept="image/*">
+          <label for="foto">Fotografía de perfil</label>
+          <input type="file" id="foto" name="foto" accept="image/*" />
 
-                <label for="perfil_nombre">Nombre</label>
-                <input
-                    type="text"
-                    id="perfil_nombre"
-                    name="nombre"
-                    value="Salvador">
+          <label for="perfil_nombre">Nombre</label>
+          <input type="text" id="perfil_nombre" name="nombre" value="Salvador" />
 
-                <label for="perfil_apellidos">Apellidos</label>
-                <input
-                    type="text"
-                    id="perfil_apellidos"
-                    name="apellidos"
-                    value="Aolani">
+          <label for="perfil_apellidos">Apellidos</label>
+          <input type="text" id="perfil_apellidos" name="apellidos" value="Aolani" />
 
-                <label for="perfil_correo">Correo electrónico</label>
-                <input
-                    type="email"
-                    id="perfil_correo"
-                    name="email"
-                    value="trabajolasc27@gmail.com">
+          <label for="perfil_correo">Correo electrónico</label>
+          <input type="email" id="perfil_correo" name="email" value="trabajolasc27@gmail.com" />
 
-                <button class="boton-formulario" type="submit">
-                    Guardar cambios
-                </button>
-            </form>
-        </article>
+          <button class="boton-formulario" type="submit">Guardar cambios</button>
+        </form>
+      </article>
     </div>
-</section>
+  </section>
 {% endblock %}

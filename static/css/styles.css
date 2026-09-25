@@ -983,4 +983,27 @@ th {
         grid-template-columns: 1fr;
     }
 }
+
+.formulario-password {
+    max-width: 720px;
+}
+
+.aviso-seguridad {
+    margin: 25px 0;
+    padding: 18px;
+    color: #5c4500;
+    background: #fff6d8;
+    border-left: 5px solid var(--dorado);
+    border-radius: 6px;
+}
+
+.aviso-seguridad strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.aviso-seguridad p {
+    margin: 0;
+    line-height: 1.6;
+}
 }

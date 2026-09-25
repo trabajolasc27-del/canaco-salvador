@@ -44,3 +44,6 @@ def panel_categorias(request):
 
 def panel_usuarios(request):
     return render(request, "home/panel_usuarios.html")
+
+def cambiar_password(request):
+    return render(request, "home/cambiar_password.html")
