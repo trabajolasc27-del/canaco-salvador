@@ -4,6 +4,8 @@ from django.shortcuts import render
 def index(request):
     return render(request, "home/index.html")
 
+def noticias(request):
+    return render(request, "home/noticias.html")
 
 def detalle_noticia(request):
     return render(request, "home/detalle.html")

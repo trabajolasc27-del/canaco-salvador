@@ -1,0 +1,95 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Noticias | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Actualidad empresarial</span>
+        <h1>Todas las noticias</h1>
+
+        <p>
+            Consulta información sobre comercio, tecnología,
+            capacitación, eventos y emprendimiento.
+        </p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="cabecera-noticias">
+        <div>
+            <span class="subtitulo">Publicaciones</span>
+            <h2>Noticias recientes</h2>
+        </div>
+
+        <a href="{% url 'home:categoria' %}">
+            Consultar categorías
+        </a>
+    </div>
+
+    <div class="lista-noticias">
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-azul">
+                Comercio
+            </div>
+
+            <div>
+                <p class="fecha">24 de septiembre de 2026</p>
+
+                <h2>Nuevas oportunidades para negocios locales</h2>
+
+                <p>
+                    Empresarios participaron en una jornada de capacitación
+                    para fortalecer sus estrategias comerciales.
+                </p>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
+            </div>
+        </article>
+
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-verde">
+                Tecnología
+            </div>
+
+            <div>
+                <p class="fecha">22 de septiembre de 2026</p>
+
+                <h2>Herramientas digitales para pequeñas empresas</h2>
+
+                <p>
+                    Las plataformas digitales permiten mejorar la comunicación
+                    con clientes y la promoción de productos.
+                </p>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
+            </div>
+        </article>
+
+        <article class="noticia-horizontal">
+            <div class="miniatura miniatura-naranja">
+                Eventos
+            </div>
+
+            <div>
+                <p class="fecha">20 de septiembre de 2026</p>
+
+                <h2>Próxima feria empresarial en Villahermosa</h2>
+
+                <p>
+                    El evento reunirá comercios, proveedores y nuevos
+                    emprendimientos de la región.
+                </p>
+
+                <a href="{% url 'home:detalle' %}">
+                    Leer noticia
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

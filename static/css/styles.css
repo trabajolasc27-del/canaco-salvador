@@ -1006,4 +1006,150 @@ th {
     margin: 0;
     line-height: 1.6;
 }
+
+.cabecera-noticias {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cabecera-noticias h2 {
+    margin: 6px 0 0;
+    font-size: 2rem;
+}
+
+.cabecera-noticias > a {
+    color: var(--azul);
+    font-weight: 800;
+}
+
+.lista-noticias {
+    display: grid;
+    gap: 22px;
+}
+
+.noticia-horizontal {
+    display: grid;
+    padding: 22px;
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 25px;
+    box-shadow: 0 8px 22px rgba(16, 42, 67, 0.07);
+}
+
+.noticia-horizontal h2 {
+    margin: 7px 0 12px;
+}
+
+.noticia-horizontal p {
+    color: var(--gris-texto);
+    line-height: 1.6;
+}
+
+.noticia-horizontal a {
+    color: var(--azul);
+    font-weight: 800;
+}
+
+.miniatura {
+    display: grid;
+    min-height: 180px;
+    padding: 20px;
+    place-items: center;
+    color: white;
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+.miniatura-azul {
+    background: linear-gradient(135deg, #2a6f97, #102a43);
+}
+
+.miniatura-verde {
+    background: linear-gradient(135deg, #1b998b, #0b5351);
+}
+
+.miniatura-naranja {
+    background: linear-gradient(135deg, #cb6d51, #6f2b23);
+}
+
+.rejilla-categorias-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.tarjeta-categoria {
+    position: relative;
+    min-height: 240px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.12);
+    transition: transform 0.2s;
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-categoria span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.tarjeta-categoria h2 {
+    margin: 25px 0 10px;
+    font-size: 2rem;
+}
+
+.tarjeta-categoria p {
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+.tarjeta-categoria strong {
+    display: block;
+    margin-top: 25px;
+    color: var(--dorado);
+}
+
+.categoria-comercio {
+    background: linear-gradient(135deg, #102a43, #2a6f97);
+}
+
+.categoria-tecnologia {
+    background: linear-gradient(135deg, #0b5351, #1b998b);
+}
+
+.categoria-capacitacion {
+    background: linear-gradient(135deg, #5c3977, #9368b7);
+}
+
+.categoria-eventos {
+    background: linear-gradient(135deg, #6f2b23, #cb6d51);
+}
+
+.categoria-emprendimiento {
+    background: linear-gradient(135deg, #594a05, #9b8110);
+}
+
+@media (max-width: 800px) {
+    .cabecera-noticias {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .noticia-horizontal,
+    .rejilla-categorias-panel {
+        grid-template-columns: 1fr;
+    }
+}
 }

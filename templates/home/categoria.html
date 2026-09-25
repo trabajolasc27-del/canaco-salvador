@@ -1,59 +1,70 @@
 {% extends "partials/base.html" %}
 
-{% block title %}Noticias | CANACO Tabasco{% endblock %}
+{% block title %}Categorías | CANACO Tabasco{% endblock %}
 
 {% block content %}
 <section class="encabezado-pagina">
     <div class="contenedor">
-        <span class="etiqueta">Categoría</span>
-        <h1>Noticias de comercio</h1>
-        <p>Información para empresarios y emprendedores de Tabasco.</p>
+        <span class="etiqueta">Organización informativa</span>
+        <h1>Categorías de noticias</h1>
+
+        <p>
+            Selecciona un tema para consultar sus publicaciones.
+        </p>
     </div>
 </section>
 
 <section class="contenedor seccion">
-    <div class="lista-noticias">
-        <article class="noticia-horizontal">
-            <div class="miniatura miniatura-azul">Comercio</div>
+    <div class="rejilla-categorias-panel">
+        <a
+            class="tarjeta-categoria categoria-comercio"
+            href="{% url 'home:noticias' %}?categoria=comercio">
 
-            <div>
-                <p class="fecha">24 de septiembre de 2026</p>
-                <h2>Nuevas oportunidades para negocios locales</h2>
-                <p>
-                    Empresarios participaron en una jornada de capacitación
-                    para fortalecer sus estrategias comerciales.
-                </p>
-                <a href="{% url 'home:detalle' %}">Leer noticia</a>
-            </div>
-        </article>
+            <span>01</span>
+            <h2>Comercio</h2>
+            <p>Información para negocios y establecimientos locales.</p>
+            <strong>Consultar noticias →</strong>
+        </a>
 
-        <article class="noticia-horizontal">
-            <div class="miniatura miniatura-verde">Tecnología</div>
+        <a
+            class="tarjeta-categoria categoria-tecnologia"
+            href="{% url 'home:noticias' %}?categoria=tecnologia">
 
-            <div>
-                <p class="fecha">22 de septiembre de 2026</p>
-                <h2>Herramientas digitales para pequeñas empresas</h2>
-                <p>
-                    Plataformas digitales ayudan a mejorar la comunicación
-                    con clientes y la promoción de productos.
-                </p>
-                <a href="{% url 'home:detalle' %}">Leer noticia</a>
-            </div>
-        </article>
+            <span>02</span>
+            <h2>Tecnología</h2>
+            <p>Herramientas digitales y transformación empresarial.</p>
+            <strong>Consultar noticias →</strong>
+        </a>
 
-        <article class="noticia-horizontal">
-            <div class="miniatura miniatura-naranja">Eventos</div>
+        <a
+            class="tarjeta-categoria categoria-capacitacion"
+            href="{% url 'home:noticias' %}?categoria=capacitacion">
 
-            <div>
-                <p class="fecha">20 de septiembre de 2026</p>
-                <h2>Próxima feria empresarial en Villahermosa</h2>
-                <p>
-                    El evento reunirá comercios, proveedores y nuevos
-                    emprendimientos de la región.
-                </p>
-                <a href="{% url 'home:detalle' %}">Leer noticia</a>
-            </div>
-        </article>
+            <span>03</span>
+            <h2>Capacitación</h2>
+            <p>Cursos, talleres y actividades de formación.</p>
+            <strong>Consultar noticias →</strong>
+        </a>
+
+        <a
+            class="tarjeta-categoria categoria-eventos"
+            href="{% url 'home:noticias' %}?categoria=eventos">
+
+            <span>04</span>
+            <h2>Eventos</h2>
+            <p>Ferias, reuniones y encuentros empresariales.</p>
+            <strong>Consultar noticias →</strong>
+        </a>
+
+        <a
+            class="tarjeta-categoria categoria-emprendimiento"
+            href="{% url 'home:noticias' %}?categoria=emprendimiento">
+
+            <span>05</span>
+            <h2>Emprendimiento</h2>
+            <p>Proyectos, oportunidades e historias de emprendedores.</p>
+            <strong>Consultar noticias →</strong>
+        </a>
     </div>
 </section>
 {% endblock %}
