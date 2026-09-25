@@ -1,0 +1,41 @@
+<aside class="menu-panel">
+    <h2>Administración</h2>
+
+    <a
+        class="{% if request.resolver_match.url_name == 'panel' %}activo{% endif %}"
+        href="{% url 'home:panel' %}">
+        Resumen
+    </a>
+
+    <a
+        class="{% if request.resolver_match.url_name == 'panel_noticias' or request.resolver_match.url_name == 'nueva_publicacion' %}activo{% endif %}"
+        href="{% url 'home:panel_noticias' %}">
+        Noticias
+    </a>
+
+    <a
+        class="{% if request.resolver_match.url_name == 'panel_comentarios' %}activo{% endif %}"
+        href="{% url 'home:panel_comentarios' %}">
+        Comentarios
+    </a>
+
+    <a
+        class="{% if request.resolver_match.url_name == 'panel_categorias' %}activo{% endif %}"
+        href="{% url 'home:panel_categorias' %}">
+        Categorías
+    </a>
+
+    <a
+        class="{% if request.resolver_match.url_name == 'panel_usuarios' %}activo{% endif %}"
+        href="{% url 'home:panel_usuarios' %}">
+        Usuarios
+    </a>
+
+    <a href="{% url 'home:perfil' %}">
+        Mi perfil
+    </a>
+
+    <a class="cerrar-sesion" href="{% url 'home:login' %}">
+        Cerrar sesión
+    </a>
+</aside>

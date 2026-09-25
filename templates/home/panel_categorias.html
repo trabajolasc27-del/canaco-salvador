@@ -1,0 +1,136 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Categorías | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Panel de categorías</h1>
+        <p>Organiza las secciones informativas del portal.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        {% include "partials/menu_admin.html" %}
+
+        <div class="contenido-panel">
+            <section class="tabla-panel">
+                <div class="cabecera-tabla">
+                    <div>
+                        <span class="subtitulo">Organización</span>
+                        <h2>Categorías registradas</h2>
+                    </div>
+                </div>
+
+                <form class="formulario-categoria">
+                    {% csrf_token %}
+
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre de la categoría"
+                        maxlength="60"
+                        required>
+
+                    <button class="boton-pequeno" type="submit">
+                        Agregar categoría
+                    </button>
+                </form>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Noticias</th>
+                                <th>Fecha de creación</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Comercio</td>
+                                <td>4</td>
+                                <td>20/09/2026</td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Tecnología</td>
+                                <td>3</td>
+                                <td>20/09/2026</td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Capacitación</td>
+                                <td>2</td>
+                                <td>21/09/2026</td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>Eventos</td>
+                                <td>2</td>
+                                <td>21/09/2026</td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>Emprendimiento</td>
+                                <td>1</td>
+                                <td>22/09/2026</td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

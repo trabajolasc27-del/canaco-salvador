@@ -1,0 +1,122 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Comentarios | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Panel de comentarios</h1>
+        <p>Aprueba, bloquea o elimina los comentarios recibidos.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        {% include "partials/menu_admin.html" %}
+
+        <div class="contenido-panel">
+            <section class="tabla-panel">
+                <div class="cabecera-tabla">
+                    <div>
+                        <span class="subtitulo">Moderación</span>
+                        <h2>Comentarios recibidos</h2>
+                    </div>
+                </div>
+
+                <div class="filtros-panel">
+                    <input
+                        type="search"
+                        placeholder="Buscar comentario o usuario">
+
+                    <select>
+                        <option value="">Todos los estados</option>
+                        <option>Pendiente</option>
+                        <option>Aprobado</option>
+                        <option>Bloqueado</option>
+                    </select>
+                </div>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Comentario</th>
+                                <th>Noticia</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Laura Pérez</td>
+                                <td>Excelente iniciativa para los negocios.</td>
+                                <td>Oportunidades para negocios locales</td>
+                                <td>
+                                    <span class="estado pendiente">
+                                        Pendiente
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion aprobar" type="button">
+                                        Aprobar
+                                    </button>
+                                    <button class="accion bloquear" type="button">
+                                        Bloquear
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>José Hernández</td>
+                                <td>La capacitación fue muy útil.</td>
+                                <td>Herramientas digitales</td>
+                                <td>
+                                    <span class="estado aprobado">
+                                        Aprobado
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion bloquear" type="button">
+                                        Bloquear
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Ana López</td>
+                                <td>¿Dónde puedo registrarme para el evento?</td>
+                                <td>Feria empresarial</td>
+                                <td>
+                                    <span class="estado pendiente">
+                                        Pendiente
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion aprobar" type="button">
+                                        Aprobar
+                                    </button>
+                                    <button class="accion bloquear" type="button">
+                                        Bloquear
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

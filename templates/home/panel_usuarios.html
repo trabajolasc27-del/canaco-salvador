@@ -1,0 +1,127 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Usuarios | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Panel de usuarios</h1>
+        <p>Consulta y administra las cuentas registradas.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        {% include "partials/menu_admin.html" %}
+
+        <div class="contenido-panel">
+            <section class="tabla-panel">
+                <div class="cabecera-tabla">
+                    <div>
+                        <span class="subtitulo">Cuentas</span>
+                        <h2>Usuarios registrados</h2>
+                    </div>
+
+                    <button class="boton-pequeno" type="button">
+                        Crear usuario
+                    </button>
+                </div>
+
+                <div class="filtros-panel">
+                    <input
+                        type="search"
+                        placeholder="Buscar nombre, usuario o correo">
+
+                    <select>
+                        <option value="">Todos los roles</option>
+                        <option>Administrador</option>
+                        <option>Operador</option>
+                        <option>Usuario</option>
+                    </select>
+
+                    <select>
+                        <option value="">Todos los estados</option>
+                        <option>Activo</option>
+                        <option>Bloqueado</option>
+                    </select>
+                </div>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>salvador</td>
+                                <td>Salvador Aolani</td>
+                                <td>trabajolasc27@gmail.com</td>
+                                <td>Administrador</td>
+                                <td>
+                                    <span class="estado aprobado">
+                                        Activo
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>laura.perez</td>
+                                <td>Laura Pérez</td>
+                                <td>laura@example.com</td>
+                                <td>Usuario</td>
+                                <td>
+                                    <span class="estado aprobado">
+                                        Activo
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion bloquear" type="button">
+                                        Bloquear
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>operador.canaco</td>
+                                <td>Operador CANACO</td>
+                                <td>operador@example.com</td>
+                                <td>Operador</td>
+                                <td>
+                                    <span class="estado bloqueado">
+                                        Bloqueado
+                                    </span>
+                                </td>
+                                <td class="acciones">
+                                    <button class="accion aprobar" type="button">
+                                        Activar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

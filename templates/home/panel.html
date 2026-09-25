@@ -13,23 +13,7 @@
 
 <section class="contenedor seccion">
     <div class="panel-contenedor">
-        <aside class="menu-panel">
-            <h2>Administración</h2>
-
-            <a class="activo" href="{% url 'home:panel' %}">
-                Resumen
-            </a>
-
-            <a href="#">Noticias</a>
-            <a href="#">Comentarios</a>
-            <a href="#">Categorías</a>
-            <a href="#">Usuarios</a>
-            <a href="{% url 'home:perfil' %}">Mi perfil</a>
-            <a class="cerrar-sesion" href="{% url 'home:login' %}">
-                Cerrar sesión
-            </a>
-        </aside>
-
+        {% include "partials/menu_admin.html" %}
         <div class="contenido-panel">
             <div class="tarjetas-estadisticas">
                 <article>
@@ -64,7 +48,9 @@
                         <h2>Últimas publicaciones</h2>
                     </div>
 
-                    <a class="boton-pequeno" href="#">
+                    <a
+                        class="boton-pequeno"
+                        href="{% url 'home:nueva_publicacion' %}">
                         Nueva publicación
                     </a>
                 </div>
@@ -82,23 +68,41 @@
 
                         <tbody>
                             <tr>
-                                <td>Nuevas oportunidades para negocios locales</td>
+                                <td>
+                                    Nuevas oportunidades para negocios locales
+                                </td>
                                 <td>Comercio</td>
-                                <td><span class="estado publicado">Publicado</span></td>
+                                <td>
+                                    <span class="estado publicado">
+                                        Publicado
+                                    </span>
+                                </td>
                                 <td>24/09/2026</td>
                             </tr>
 
                             <tr>
-                                <td>Herramientas digitales para empresas</td>
+                                <td>
+                                    Herramientas digitales para empresas
+                                </td>
                                 <td>Tecnología</td>
-                                <td><span class="estado publicado">Publicado</span></td>
+                                <td>
+                                    <span class="estado publicado">
+                                        Publicado
+                                    </span>
+                                </td>
                                 <td>22/09/2026</td>
                             </tr>
 
                             <tr>
-                                <td>Próxima feria empresarial</td>
+                                <td>
+                                    Próxima feria empresarial
+                                </td>
                                 <td>Eventos</td>
-                                <td><span class="estado borrador">Borrador</span></td>
+                                <td>
+                                    <span class="estado borrador">
+                                        Borrador
+                                    </span>
+                                </td>
                                 <td>20/09/2026</td>
                             </tr>
                         </tbody>

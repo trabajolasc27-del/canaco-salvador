@@ -1,0 +1,121 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Nueva publicación | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Crear nueva publicación</h1>
+        <p>Completa la información de la noticia.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        {% include "partials/menu_admin.html" %}
+        <article class="formulario-publicacion">
+            <div class="cabecera-formulario">
+                <div>
+                    <span class="subtitulo">Formulario</span>
+                    <h2>Datos de la publicación</h2>
+                </div>
+
+                <a href="{% url 'home:panel_noticias' %}">
+                    Regresar
+                </a>
+            </div>
+
+            <form
+                class="formulario"
+                method="post"
+                enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <label for="titulo">Título</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Título de la publicación"
+                    maxlength="180"
+                    required>
+
+                <label for="resumen">Resumen</label>
+                <textarea
+                    id="resumen"
+                    name="resumen"
+                    rows="3"
+                    placeholder="Escribe un resumen breve"
+                    required></textarea>
+
+                <div class="rejilla-formulario">
+                    <div>
+                        <label for="categoria_publicacion">Categoría</label>
+
+                        <select
+                            id="categoria_publicacion"
+                            name="categoria"
+                            required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="comercio">Comercio</option>
+                            <option value="tecnologia">Tecnología</option>
+                            <option value="capacitacion">Capacitación</option>
+                            <option value="eventos">Eventos</option>
+                            <option value="emprendimiento">Emprendimiento</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="estado_publicacion">Estado</label>
+
+                        <select
+                            id="estado_publicacion"
+                            name="estado"
+                            required>
+                            <option value="borrador">Borrador</option>
+                            <option value="publicado">Publicado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="contenido">Contenido</label>
+                <textarea
+                    id="contenido"
+                    name="contenido"
+                    rows="12"
+                    placeholder="Escribe el contenido completo de la noticia"
+                    required></textarea>
+
+                <label for="imagen_portada">Imagen de portada</label>
+                <input
+                    type="file"
+                    id="imagen_portada"
+                    name="imagen_portada"
+                    accept="image/*">
+
+                <label for="galeria">Galería de imágenes</label>
+                <input
+                    type="file"
+                    id="galeria"
+                    name="galeria"
+                    accept="image/*"
+                    multiple>
+
+                <div class="acciones-formulario">
+                    <a
+                        class="boton-secundario"
+                        href="{% url 'home:panel_noticias' %}">
+                        Cancelar
+                    </a>
+
+                    <button class="boton-formulario" type="submit">
+                        Guardar publicación
+                    </button>
+                </div>
+            </form>
+        </article>
+    </div>
+</section>
+{% endblock %}

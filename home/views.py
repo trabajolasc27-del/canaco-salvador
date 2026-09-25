@@ -26,3 +26,21 @@ def perfil(request):
 
 def panel(request):
     return render(request, "home/panel.html")
+
+def panel_noticias(request):
+    return render(request, "home/panel_noticias.html")
+
+
+def nueva_publicacion(request):
+    return render(request, "home/nueva_publicacion.html")
+
+def panel_comentarios(request):
+    return render(request, "home/panel_comentarios.html")
+
+
+def panel_categorias(request):
+    return render(request, "home/panel_categorias.html")
+
+
+def panel_usuarios(request):
+    return render(request, "home/panel_usuarios.html")

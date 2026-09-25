@@ -1,0 +1,142 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Administrar noticias | CANACO Tabasco{% endblock %}
+
+{% block content %}
+<section class="encabezado-pagina">
+    <div class="contenedor">
+        <span class="etiqueta">Administración</span>
+        <h1>Panel de noticias</h1>
+        <p>Crea, consulta, edita y elimina publicaciones.</p>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <div class="panel-contenedor">
+        {% include "partials/menu_admin.html" %}
+        <div class="contenido-panel">
+            <section class="tabla-panel">
+                <div class="cabecera-tabla">
+                    <div>
+                        <span class="subtitulo">Publicaciones</span>
+                        <h2>Noticias existentes</h2>
+                    </div>
+
+                    <a
+                        class="boton-pequeno"
+                        href="{% url 'home:nueva_publicacion' %}">
+                        Crear publicación
+                    </a>
+                </div>
+
+                <div class="filtros-panel">
+                    <input
+                        type="search"
+                        placeholder="Buscar por título">
+
+                    <select>
+                        <option value="">Todas las categorías</option>
+                        <option>Comercio</option>
+                        <option>Tecnología</option>
+                        <option>Capacitación</option>
+                        <option>Eventos</option>
+                        <option>Emprendimiento</option>
+                    </select>
+
+                    <select>
+                        <option value="">Todos los estados</option>
+                        <option>Publicado</option>
+                        <option>Borrador</option>
+                    </select>
+                </div>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Autor</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Nuevas oportunidades para negocios locales</td>
+                                <td>Comercio</td>
+                                <td>Salvador</td>
+                                <td>
+                                    <span class="estado publicado">
+                                        Publicado
+                                    </span>
+                                </td>
+                                <td>24/09/2026</td>
+                                <td class="acciones">
+                                    <a class="accion ver" href="{% url 'home:detalle' %}">
+                                        Ver
+                                    </a>
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Herramientas digitales para empresas</td>
+                                <td>Tecnología</td>
+                                <td>Salvador</td>
+                                <td>
+                                    <span class="estado publicado">
+                                        Publicado
+                                    </span>
+                                </td>
+                                <td>22/09/2026</td>
+                                <td class="acciones">
+                                    <a class="accion ver" href="{% url 'home:detalle' %}">
+                                        Ver
+                                    </a>
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Próxima feria empresarial</td>
+                                <td>Eventos</td>
+                                <td>Salvador</td>
+                                <td>
+                                    <span class="estado borrador">
+                                        Borrador
+                                    </span>
+                                </td>
+                                <td>20/09/2026</td>
+                                <td class="acciones">
+                                    <a class="accion ver" href="{% url 'home:detalle' %}">
+                                        Ver
+                                    </a>
+                                    <button class="accion editar" type="button">
+                                        Editar
+                                    </button>
+                                    <button class="accion eliminar" type="button">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -814,4 +814,173 @@ th {
         flex-direction: column;
     }
 }
+
+.filtros-panel {
+    display: grid;
+    margin-bottom: 22px;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+}
+
+.filtros-panel input,
+.filtros-panel select {
+    width: 100%;
+    padding: 11px;
+    font: inherit;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+.accion {
+    display: inline-block;
+    margin: 2px;
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.accion.ver {
+    color: white;
+    background: var(--azul);
+}
+
+.accion.editar {
+    color: #5c4500;
+    background: #ffe28a;
+}
+
+.accion.eliminar {
+    color: white;
+    background: #b3263b;
+}
+
+.formulario-publicacion {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(16, 42, 67, 0.08);
+}
+
+.cabecera-formulario {
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.cabecera-formulario h2 {
+    margin: 5px 0;
+}
+
+.cabecera-formulario a {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.acciones-formulario {
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.acciones-formulario .boton-formulario {
+    margin-top: 0;
+}
+
+.boton-secundario {
+    padding: 13px 20px;
+    color: var(--azul-oscuro);
+    background: #e5ebef;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 850px) {
+    .filtros-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-formulario,
+    .acciones-formulario {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .acciones-formulario {
+        text-align: center;
+    }
+}
+
+.estado.pendiente {
+    color: #785b00;
+    background: #fff1bf;
+}
+
+.estado.aprobado {
+    color: #0b6047;
+    background: #d9f5eb;
+}
+
+.estado.bloqueado {
+    color: #8f1d2c;
+    background: #ffe0e5;
+}
+
+.accion.aprobar {
+    color: white;
+    background: #16805d;
+}
+
+.accion.bloquear {
+    color: white;
+    background: #6c596e;
+}
+
+.formulario-categoria {
+    display: grid;
+    margin-bottom: 25px;
+    padding: 18px;
+    background: var(--gris-fondo);
+    border-radius: 8px;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+}
+
+.formulario-categoria input {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+.formulario-categoria .boton-pequeno {
+    border: 0;
+    cursor: pointer;
+}
+
+.cabecera-tabla button.boton-pequeno {
+    border: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .formulario-categoria {
+        grid-template-columns: 1fr;
+    }
+}
 }
